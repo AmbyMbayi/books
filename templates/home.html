@@ -7,10 +7,10 @@
 <img src="{% static 'images/recipe-2.jpg' %}" alt="">
 {% if user.is_authenticated%}
     Hi {{ user.email}}!
-    <p><a href="{% url 'logout' %}">Logout</a></p>
+    <p><a href="{% url 'account_logout' %}">Logout</a></p>
 {% else %}
     <p>you are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a>
-   <a href="{% url 'signup' %}">Sign Up</a>
+    <a href="{% url 'account_login' %}">Log In</a>
+   <a href="{% url 'account_signup' %}">Sign Up</a>
 {% endif %}
 {%endblock content %}
